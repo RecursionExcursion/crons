@@ -1,0 +1,15 @@
+name: dd-go Pinger
+
+on: 
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping API
+        run: curl -X GET "https://dd-api-wt6r.onrender.com"
+
