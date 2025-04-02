@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show current time
+        run: echo "Current time $(date)"
+
       - name: Ping API
         run: curl -X GET "https://dd-api-wt6r.onrender.com"
 
